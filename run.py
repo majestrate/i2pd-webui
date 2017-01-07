@@ -61,7 +61,7 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
         proxy_request(post_data, s)
 
 if __name__ == "__main__":
-    httpd = http.server.HTTPServer(("", listen_port), MyHandler)
+    httpd = http.server.HTTPServer(("127.0.0.1", listen_port), MyHandler)
     try:
         print(("WebUI is listening at http://127.0.0.1:" + str(listen_port)))
         httpd.serve_forever()
