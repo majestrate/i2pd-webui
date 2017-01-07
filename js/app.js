@@ -10,6 +10,7 @@ var app = {
         doAjax(function() {
             if (this.readyState == 4) {
                 if (this.status == "200" && this.responseText != "") {
+                    console.log(this.responseText);
                     window.token = JSON.parse(this.responseText).result.Token;
                     document.dispatchEvent(ready);
                 } else {
